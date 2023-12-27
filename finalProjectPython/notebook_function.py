@@ -68,3 +68,20 @@ def edit_note():
         print("Заметка успешно создана!")
     else:
         print("Заметка с указанным ID не найдена.")
+
+
+def delete_note():
+    note_id = int(input("Введите ID заметки, которую необходимо удалить: "))
+    note_index = -1
+
+    for index, notes in enumerate(note):
+        if notes['id'] == note_id:
+            note_index = index
+            break
+        
+    if note_index != -1:
+        del note[note_index]
+        save_notes()
+        print("Заметка успешно удалена!")
+    else:
+        print("Заметка с указанным ID не найдена.")
