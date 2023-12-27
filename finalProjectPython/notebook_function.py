@@ -27,12 +27,12 @@ def create_note():
 
 
 def save_notes():
-    with open("notes.json", "w") as file:
+    with open("finalProject/finalProjectPython/notes.json", "w") as file:
         json.dump(note, file)
 
 
 def load_notes():
-    if os.path.exists("notes.json"):
+    if os.path.exists("finalProject/finalProjectPython/notes.json"):
         with open("notes.json", "r") as file:
             note.extend(json.load(file))
 
