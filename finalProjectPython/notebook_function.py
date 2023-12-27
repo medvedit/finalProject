@@ -35,3 +35,13 @@ def load_notes():
     if os.path.exists("notes.json"):
         with open("notes.json", "r") as file:
             note.extend(json.load(file))
+
+def read_notes():
+    if not note:
+        print("Список заметок пуст. Начните с создания заметки.")
+    else:
+      for notes in note:
+          print(f"ID: {notes['id']}\n "
+                f"Заголовок: {notes['title']}\n "
+                f"Текст: {notes['body']}\n "
+                f"Дата/Время: {notes['timestamp']}\n")
