@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 
 
 
@@ -18,7 +19,12 @@ def create_note():
         "body": note_body,
         "timestamp": timestamp
     }
-
     note.append(notes)
+    save_notes()
 
     print("Заметка успешно создана!")
+
+
+def save_notes():
+    with open("notes.json", "w") as file:
+        json.dump(note, file)
