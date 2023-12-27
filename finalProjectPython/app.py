@@ -1,4 +1,4 @@
-from notebook_function import create_note, load_notes
+from notebook_function import create_note, load_notes, read_notes
 
 
 load_notes()
@@ -17,7 +17,7 @@ while True:
     if choice == "1":
         create_note()
     elif choice == "2":
-
+        read_notes()
     elif choice == "3":
 
     elif choice == "4":
